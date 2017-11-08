@@ -8,16 +8,8 @@ RUN apt-get install -y apache2 unzip
 
 # PASSAR O PARAMETRO DO ARQUIVO BIN DO JAVA
 RUN rm -R /var/www/html/*
-COPY ${BINARY_FILE} /var/www/html/package.zip
-
-RUN ls /var/www/html
-
-RUN cd /var/www/html
-
-RUN pwd
-
-RUN unzip package.zip
-RUN rm package.zip
+COPY ${BINARY_FILE} /opt/package.zip
+RUN unzip /opt/package.zip -d /var/www/html
 
 # EXPOR A PORTA
 EXPOSE 80
