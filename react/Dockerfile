@@ -14,3 +14,5 @@ RUN cp -r /opt/build/* /var/www/html
 
 # EXPOR A PORTA
 EXPOSE 80
+
+CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
