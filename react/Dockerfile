@@ -10,7 +10,7 @@ RUN apt-get install -y apache2 unzip
 RUN rm -R /var/www/html/*
 COPY ${BINARY_FILE} /var/www/html/package.zip
 
-RUN ll /var/www/html
+RUN ls /var/www/html
 
 RUN cd /var/www/html
 
