@@ -2,6 +2,7 @@ FROM httpd:2.4
 MAINTAINER Anderson Junqueira (anderson.junqueira@gmail.com)
 
 ARG BINARY_FILE
+ENV ENVIRONMENT=prod
 
 RUN apt-get update 
 RUN apt-get install -y unzip
